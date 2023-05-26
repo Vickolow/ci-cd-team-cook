@@ -4,5 +4,6 @@ jobs:
   Test:
     runs-on: ubuntu-lastest
     steps:
-      -run: echo "🎉 The job was autimatically triggered by a ${{ github.event_name }} event."
-      -run: pyjon main.py   
+      - uses: actions/checkout@v2
+      - run: echo "🎉 The job was autimatically triggered by a ${{ github.event_name }} event."
+      - run: python main.py   
